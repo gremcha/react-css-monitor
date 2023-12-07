@@ -1,0 +1,121 @@
+:root {
+  --monitor-border-color: #000;
+  --power-button-on-color: #2bc82e;
+  --power-button-off-color: #8b1d1d;
+  --monitor-stand-up-colos: #2a2a2a;
+}
+
+.monitor {
+  position: relative;
+  width: 670px;
+  height: 460px;
+  background-color: var(--monitor-border-color);
+  border-radius: 5px 5px 10px 10px;
+}
+
+.monitor-display {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 640px;
+  height: 410px;
+  background-color: white;
+  border-radius: 5px;
+}
+.monitor-display.off {
+  background-color: #303030;
+}
+
+.monitor-power-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: var(--monitor-border-color);
+  cursor: pointer;
+}
+
+.monitor-power-light-round {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4px;
+  height: 13px;
+  width: 13px;
+  border-radius: 100%;
+  background-color: var(--monitor-border-color);
+  border: 3px solid;
+  border-color: var(--power-button-on-color);
+}
+.monitor-power-light-round.off {
+  border-color: var(--power-button-off-color);
+}
+
+.monitor-power-light-line {
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: var(--power-button-on-color);
+  border-left: 3px solid var(--monitor-border-color);
+  border-right: 3px solid var(--monitor-border-color);
+}
+.monitor-power-light-line.off {
+  background-color: var(--power-button-off-color);
+}
+
+.monitor-stand {
+  perspective: 200px;
+  perspective-origin: center;
+}
+
+.monitor-stand-top {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 460px;
+  width: 130px;
+  height: 110px;
+  background-color: var(--monitor-stand-up-colos);
+}
+
+.monitor-stand-top::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 85px;
+  width: 130px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--monitor-stand-up-colos);
+}
+
+.monitor-stand-bottom {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotateX(45deg);
+  top: 560px;
+  width: 250px;
+  height: 30px;
+  background-color: #222222;
+}
+
+.monitor-stand-bottom-front {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 615px;
+  width: 263px;
+  height: 20px;
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */
